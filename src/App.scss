@@ -1,0 +1,41 @@
+@import "./index.scss";
+
+body {
+  background: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+
+  ul {
+    width: clamp(300px, 75vw, 500px);
+    padding-inline: 30px;
+    margin-top: 20px;
+    li {
+      margin-block: 10px;
+      padding: 10px;
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid $navy-blue;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: $white;
+      &:hover {
+        border-color: $emphasis;
+        border-width: 2px;
+      }
+      label{
+        cursor: pointer;
+        svg{
+            fill: $primary;
+        }
+      }
+      input[type="radio"] {
+        display: none;
+      }
+    }
+  }
+}
